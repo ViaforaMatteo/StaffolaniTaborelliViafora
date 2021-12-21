@@ -1,0 +1,148 @@
+\section{Overall Descriprion}
+
+\subsection{Product Perspective}
+The system will be developed from scratch, and it will be integrated with the other system already present in Telangana State.
+
+\subsubsection{Class Diagram}
+The class diagram in Figure.~\ref{fig:metamodel} is a high-level representation of the whole system.\\
+The main elements in the class diagram are:
+\begin{itemize}
+    \item \textbf{User:} identifies a user with his unique credentials. Users can be farmers, agronomists or TPM
+    \item \textbf{Farmer:} he relevant information
+    \item \textbf{Problem:} identifies a problem associated to a farmer
+    \item \textbf{HelpRequest:} identifies a help request associated to a farmer
+    \item \textbf{Replies} identifies the replies to a help request, written either by a farmer or an agronomist
+    \item \textbf{Dataproduction: } identifies the data about the entire production of a farmer
+    \item \textbf{DataCultivation:} identifies the data about a single cultivation of a farmer
+    \item \textbf{Discussion:} identifies a discussion in the forum
+    \item \textbf{DiscussionReplies:} identifies the replies to a discussion in the forum
+    \item \textbf{Messages:} identifies a message sent using the chat function, with all the relevant information
+    \item \textbf{Zone:} identifies a Mandala and the relative District
+    \item \textbf{Location:} identifies a specific address
+    \item \textbf{WeatherRequest:} identifies a weather forecast in a set time slot
+    \item \textbf{WikiFarmRequest:} identifies a suggestion request
+    \item \textbf{Agenda:} identifies the agenda associated to each agronomist
+    \item \textbf{DailyPlan:} identifies a daily plan with all the relevant information
+    \item \textbf{Event:} identifies an event programmed by an agronomist, with all the relevant information
+    \item \textbf{Report:} identifies a report written by an agronomist at the end of a visit
+    \item \textbf{TPM:} identifies a TPM with all the relevant information
+    \item \textbf{Ranking:} identifies the ranking that associates each farmer with his corresponding position
+\end{itemize}
+\newpage
+\begin{figure}[H]
+\centering
+\includegraphics[angle=90,origin=c,height=1.18\textwidth]{Images/classDiagram.jpg}
+\caption{\label{fig:metamodel}DREAM metamodel.}
+\end{figure}
+\subsection{Product functions}
+This section provides a description of the functionalities available in DREAM.
+\subsubsection{LogIn}
+LogIn allows users to access DREAM, using their credentials provided by Telangana.
+
+\subsubsection{Report a Problem}
+Report a problem allows a farmer to report any kind of problem he has encountered while growing any of his crops, whether he has solved it himself or has yet to solve it and wants to ask for help via the "Help" section.\\
+TPM and agronomists can access the list of all problems according to the selected area, so that they can keep track of what is happening in their area.
+
+\subsubsection{WikiFarm}
+WikiFarm allows agronomists and farmers to search for information on what seed to plant and what fertilizer to use, according to the zone they have entered and the type of production they have selected.
+
+\subsubsection{Weather}
+Weather allows agronomists and farmers to search for short-term or long-term forecasts for the selected zone. The system accesses the Telangana weather portal and retrieves the data that the user has requested.
+
+\subsubsection{Report production}
+Report Production allows farmers to enter their production data for each of their crops, while agronomists and TPM can retrieve all production data entered by a specific farmer.
+
+\subsubsection{Help}
+Help allows each farmer to create a new help request to overcome a problem he has encountered and was unable to overcome by his own efforts. Each help request can be seen by all farmers or agronomists, who, thanks to their experience, can help and answer the farmer's request.
+
+\subsubsection{Forum}
+Forum is a section of DREAM where farmers can create public discussions on any topic they wish to discuss. Only farmers can participate in each discussion, and it is an attempt to strengthen the community of Telangana farmers.
+\subsubsection{Agenda}
+Agenda is the most useful working tool for agronomists. They can see their visits to farmers for the current day or, even, for any day they wish. Agronomists can also create new visits or reschedule them for a new date.\\
+Agenda is also the tool with which agronomists can confirm that they have made a visit and thus upload their report of the initiatives taken with the farmer. In addition, they can report any changes to their initial schedule.
+
+\subsubsection{Visualize Initiatives}
+Visualize Initiatives allows TPM to keep track of the initiatives carried out during visits by agronomists to a farmer. This allows the TPM to retrieve details of initiatives that have been essential in improving the production of farmers who were performing badly or had faced an adverse weather event.
+
+\subsubsection{Rankings}
+Rankings is a tool that allows TPM and agronomists to evaluate in a simple and effective way the performance of farmers in Telangana or in a selected area. The results are presented in descending order according to the performance of the farmers.
+
+\subsubsection{Chat}
+Chat allows two DREAM users to communicate with each other in private, using their username.
+
+\subsection{Scenarios}
+This section provides an overview description of how DREAM helps the agricultural community of Telengana during the everyday life.
+\subsubsection{Farmer}
+\begin{enumerate} [label=\textbf{F.\arabic*}]
+    \item \textbf{Bug infestation:} Hansal during the spring season has been afflicted by a bug infestation and she would like to report the event in the systems. She opens “Report a Problem”, inserts her type of production and then, she describes the problem she has encountered. She also would like to request for help, as she’s not able to defeat the infestation on her own. She opens “Help” and she posts a new request of help that can be seen by agronomists of her area and other farmers.
+    \item \textbf{The kind farmer: }Harishankar is an expert farmer. He opens “Help” and he notices there is an assistance request from Hansal, who is afflicted by a bug infestation. Since he had the same crisis in the past, he knows the solution to this problem, so he decides to reply to the help request and he suggests using a poison that kills the bugs but does not damage the plants. Then, he sees that it’s a common topic in the Forum, so he replies to a conversation about bug infestation to leave the same advice for everyone to see.
+    \item \textbf{The new business of Ayodele: } Ayodele is a farmer from Maddur who would like to expand his production, but he does not know what is the best choice to plant. First, he opens “Weather” and he discovers that for the next six month there won’t be heavy rainfall and the climate will be good for almost any type of plant, except cotton. Then, he opens “WikiFarm” and he researches for the crops and the fertilizer to use, based on his District, Mandala and type of production. DREAM suggests him to plant cotton or Sesame and it suggests as fertilizer “Happy Soil” and “Grow Better”. Based on the information obtained, Ayodele decides to plant sesame and to use “Happy Soil”.
+    \item \textbf{Mrigankshekhar, the resilient farmer: } Mrigankshekhar is a farmer whose production grew a lot during the last year, although he faced an extraordinary amount of rainfall due to the monsoon season. At the end of the month, he opens DREAM to insert the data about his production. For each type of his production, the system asks to the farmer the amount of production and the amount of land used for that cultivation. \\After a week a TPM, through “Chat”, asks him to share information on how he overcame the adverse weather, as he is resulted to be a resilient farmer and he will get extra financial incentives from the State. Mrigankshekhar gladly accepts the request, and he opens the “Forum” and he creates a new discussion describing how he planted a new type of cotton that is resistant to heavy rain.
+\end{enumerate}
+\subsubsection{TPM}
+\begin{enumerate}[label=\textbf{TPM.\arabic*}]
+    \item \textbf{Resilient farmers are rewarded: }Ganga works for the Ministry of Agriculture in Telangana and is responsible for evaluating the performance of farmers within the country. He first opens “Ranking” and asks the system to generate a ranking of the farmers' performance. He realizes that Mrigankshekhar has managed to survive a monsoon flood and he is one of the most productive farmers of the State. Through “Chat”, she notifies Mrigankshekhar that he has been awarded of a government bonus and she asks him to share with the other farmers how he survived the flood.
+    \item \textbf{Nobody left behind: }Rao works for the Ministry of Agriculture in Telangana and is tasked with finding the most struggling farmers in the country. He first accesses DREAM and asks the system to generate a ranking of the farmers' performance. Apu is among the last in terms of performance and Rao decides to open “Report Production” to retrieve Apu’s data. He notices, from the data collected by sensors in the water distribution, that he used a low quantity of water, which caused the low yield of his soya crop. Finally, Rao opens “Chat” and he reports the case to the agronomist in charge of Apu's area.
+    \item\textbf{For a better Telangana: }Chandler works for the Ministry of Agriculture in Telangana and is tasked with evaluating which initiatives have improved the performance of resilient farmers. He first accesses “Ranking” and he asks the system to generate a ranking of farmers' performance, identifying which ones are resilient to climatic adversity. He is interested in the case of Pamir, which has doubled its production thanks to the work of agronomist Raj, who advised him to use 'Happy Soil' as a fertilizer against the magnesium deficiency in the soil caused by last April's drought. Chandler takes note of the initiative to propose it as a possible solution in the future.
+\end{enumerate}
+\subsubsection{Agronomist}
+\begin{enumerate}[label=\textbf{A.\arabic*}]
+    \item\textbf{A day as an agronomist: }Keffir goes to his office and starts his day by opening “Weather” to access the weather forecast for the current day and for the rest of the week. Then, he opens “Agenda” and he checks if any farmer visits are planned. Today he has to visit Menroosh in Palmela for the first time this year. The agronomist takes the car and drives to Menroosh. During the visit the agronomist and the farmer look at last year's production data and they decide to try planting Green Beans, while they decide to change the fertilizer for cotton production. The agronomist opens “Agenda” and confirms that he has completed his visit. After that, he enters a report of the initiatives taken with the farmer. Once back home, Keffir confirms that he has completed and respected his daily schedule.
+    \item\textbf{A bad day for Chameli: }After completing her visit to the farmer Lalitchandra, Chameli has to go and visit the next farmer on her agenda. Unfortunately, when she gets into the car, she notices that the engine of her car has a problem, because a light has turned on in the dashboard of her car. So Chameli decides to postpone her planned visit until next week and go to the mechanic. She opens “Agenda”, updates her daily schedule, in order to report that she has not been able to visit the second farmer on her schedule today and she postpones the visit to the following Tuesday. She marks her work activity as finished, then closes the portal and goes to the mechanic.
+    \item\textbf{The work office of Nandakishor: }Nandakishor opens “Agenda” and checks his daily schedule, but he notices that he has no visits scheduled for today. Then he opens “Report a Problem” and notices that Bamoosh has written a post. He opens the report and finds that Bamoosh has an unused land, and he would like to use it, but he doesn't know what to plant. Nandakishor decides to help him and first he opens “Weather”, he enters the farmer's District and Mandala, and discovers that the area is suitable for rice or corn production. In order to decide he looks the humidity of the soil in the “WikiFarm” and discovers that rice is the best option, combined with 'Super Growth 80' as fertilizer. The agronomist answers Bamoosh through “Chat” advising him to plant basmati rice and to use 69g 'Super Growth 80' per acre. Since there are no requests for help, he decides to schedule his visits for next Monday. He enters his working area and looks at the list of farmers' performances. Nandakishor notices that Tahir, despite having already been visited twice this year, is performing badly with sesame cultivation. So the agronomist plans to visit Tahir on Monday.
+\end{enumerate}
+
+\subsection{User Characteristics}
+This section describes all the users that can access DREAM.
+\subsubsection{Farmers}
+Farmers are the people in charge of taking care of the administration of a farm. They can be of all ages and don’t necessarily have a complex device to access the system. For this reason, the system should be as easy as possible to access, and it should have an intuitive GUI.
+\subsubsection{Agronomists}
+Agronomists are the people in charge of help the agricultural work of Telangana’s farmers and they have to report their work to the State, in order to help TPM. They could work from anywhere they want; they only need a device to access DREAM and a stable internet connection in all their work area.
+\subsubsection{TPM}
+TPM are the people of Telangana who are responsible of creating new Policies for the agricultural system of Telangana, they have to keep track of the work of agronomists and how farmers can improve their farms. They are also in charge of creating all the credentials of DREAM’s users and to associate the location of each farmer to their username.
+
+\subsection{Constraints}
+In this topic it is put on paper a general description about considerations, boundaries and items that will limit the system’s options.
+\subsubsection{Structure Limitation}
+The credentials of all users are created and sent by TPM during the setup phase of DREAM and, also, each farmer is also associated with the address of his/her farm. This is made to keep DREAM accessible only to people of really are part of this project.\\
+DREAM request a user to insert a zone by selecting it through the territorial division of Telangana, first he/she selects the District and then he/she selects the Mandala. This choice is made DREAM accessible to everyone, even with an obsolete device without using a GPS sensor.
+\subsubsection{Hardware Limitation}
+In order to access DREAM a user needs:
+\begin{itemize}
+    \item 2G/3G/4G/5G connection or Wi-Fi available
+    \item web browser like Firefox, Chrome, Safari
+\end{itemize}
+\subsubsection{Interfaces to other applications}
+The proper functioning of the system is strictly subordinated to an external distributed web service. This is required to keep the system update and accessible all the time, even if a server has a failure and the accesses will be redirected to another server.
+\subsection{Domain Assumptions}
+The properties that hold in the analyzed world will be listed below.\\
+\begin{enumerate}[label=\textbf{DA.\arabic*}]
+    \item All Telangana’s people, who interact with system, have an internet connection
+    \item All Telangana’s people, who interact with system, have access to a browser
+    \item Every time a farmer incurs into a problem, he/she inserts the details in the system
+    \item At the end of each month, farmers insert into the system the result of their production
+    \item Agronomists have a vehicle to visit farmers
+    \item Agronomists visit only the farmers who are in their daily schedule
+    \item An agronomist could not complete his/her daily schedule
+    \item Agronomists visit more than two times a year only the farmers who are performing badly
+    \item During the visit of a farmer by an agronomist, he/she proposes suggestions to improve the production based on the data collected since the last visit
+    \item All the farmers have a banking account where they can receive incentives
+    \item All resilient farmers receive special incentives from TPM
+    \item All good farmers provide best practices to TPM
+    \item Farmers are ranked based on their productivity per acre
+    \item All lands in Telangana have a sensor of humidity of the soil
+    \item Water distribution system has sensor to measure the amount of water given to each land
+    \item Water distribution sensors never stop to work
+    \item Humidity sensors in a land never stop to work
+    \item Weather forecast for a specific zone is always available
+    \item Agronomists know the number of times each farmer has been visited
+    \item Farmers always insert correct data about their production
+    \item The quantity produced by a farmer is quantified in tons
+    \item The lands are measured in acres
+    \item All the users know their credentials given by Telangana state
+    \item Any user knows the correct username he/she wants to contact using “Chat”
+    \item All the users do not forget their credentials given by Telangana state
+    \item Each farmer is associated with only one farm
+    \item Every farmer stays in the same location\\
+\end{enumerate}
+Furthermore, we assume the credentials to LogIn are already given by Telangana State to all the agents acting with the system, in order to exclude that external actor could have access to the platform. Each farmer user is already associated to his/her location.

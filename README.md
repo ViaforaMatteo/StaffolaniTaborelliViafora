@@ -4,7 +4,7 @@ Requirement analysis, design choices, implementation and testing are widely desc
 - __Requirements Analysis and Specifications Document__ ([RASD1.0.pdf](DeliveryFolder/RASD1.0.pdf));
 - __Design Document__ DD1.0.pdf;
 
-Artifacts and APKs of the project can be found in the [DeliveryFolder](DeliveryFolder).\
+Artifacts and APKs of the project can be found in the [DeliveryFolder](DeliveryFolder).
 
 ## Structure of the repository
 This repository contains all the files that were created in order to design, develop and test the project.
