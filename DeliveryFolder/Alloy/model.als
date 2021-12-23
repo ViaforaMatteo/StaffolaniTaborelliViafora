@@ -294,21 +294,8 @@ fact WikiFarmRequest{
 
 
 ---------------------------------
--- Function
----------------------------------
-fun numEvent[f: Farmer] : one Int {
-	#(f <: Event.farmer)
-}
-
-
----------------------------------
 -- Predicates
 ---------------------------------
-pred goodFarmer[f:Farmer, i: Int]{
-	one rk: RankingType | f in rk.farmer and rk.performance=<i
-}
-
-
 pred generalModel{
 	#Seed = 0
 	#Fertilizer = 0

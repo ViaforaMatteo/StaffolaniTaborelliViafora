@@ -304,22 +304,6 @@ fact WeatherRequest{
 fact WikiFarmRequest{
 	all wr: WikiFarmRequest | one w: WikiFarm | wr in w.wikiFarmRequest
 }
-
-
----------------------------------
--- Function
----------------------------------
-fun numEvent[f: Farmer] : one Int {
-	#(f <: Event.farmer)
-}
-
-
----------------------------------
--- Predicates
----------------------------------
-pred goodFarmer[f:Farmer, i: Int]{
-	one rk: RankingType | f in rk.farmer and rk.performance=<i
-}
 \end{lstlisting}
 
 \newpage
@@ -351,8 +335,6 @@ run generalModel for 15
 	\includegraphics[angle=90,height=1.5\textwidth]{Images/Model/model1.png}
 	\caption{Model of a general situation in Telangana}
 \end{figure}
-\newline
-
 \subsection{Help Requests}
 This graph represents two farmers requesting help. HelpRequest2 has a response from a farmer, while HelpRequest3 has a response from an agronomist. Both farmers also report a problem they have faced, using the ReportProblem function. In addition, both farmers present their DataProduction, Farmer1 presents two as one describes the most recent production, while the second represents a past situation.\\
 Below is presented the code used for generating the model.

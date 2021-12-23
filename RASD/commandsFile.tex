@@ -22,10 +22,12 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 
 %Define new header and footer style
-%\usepackage{fancyhdr}
-%\pagestyle{fancy}
-%\lfoot{\textcolor{\emph{DREAM}\quad \textbf{R}equirements \textbf{A}nalysis and \textbf{S}pecifications \textbf{D}ocument}}
-%\rfoot{\thepage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{\textcolor{Gray}{{\emph{DREAM}\quad \textbf{R}equirements \textbf{A}nalysis and \textbf{S}pecifications \textbf{D}ocument}}}
+\rfoot{\textcolor{Gray}{\thepage}}
+\renewcommand{\headrulewidth}{0pt}
 
 %PACKAGES
 \usepackage{wasysym}
@@ -54,58 +56,15 @@
 \usepackage{rotating}
 \usepackage{caption}
 
-%make landscape mode be sensitive to even and odd pages
-%start
-\def\myrotate{\ifodd\c@page\else-\fi 90}
-\makeatletter
-\global\let\orig@begin@landscape=\landscape%
-\global\let\orig@end@landscape=\endlandscape%
-\gdef\@true{1}
-\gdef\@false{0}
-\gdef\landscape{%
-    \global\let\within@landscape=\@true%
-    \orig@begin@landscape%
-}%
-\gdef\endlandscape{%
-    \orig@end@landscape%
-    \global\let\within@landscape=\@false%
-}%
-\@ifpackageloaded{pdflscape}{%
-    \gdef\pdf@landscape@rotate{\PLS@Rotate}%
-}{
-    \gdef\pdf@landscape@rotate#1{}%
-}
-\let\latex@outputpage\@outputpage
-\def\@outputpage{
-    \ifx\within@landscape\@true%
-        \if@twoside%
-            \ifodd\c@page%
-                \gdef\LS@rot{\setbox\@outputbox\vbox{%
-                    \pdf@landscape@rotate{-90}%
-                    \hbox{\rotatebox{90}{\hbox{\rotatebox{180}{\box\@outputbox}}}}}%
-                }%
-            \else%
-                \gdef\LS@rot{\setbox\@outputbox\vbox{%
-                    \pdf@landscape@rotate{+90}%
-                    \hbox{\rotatebox{90}{\hbox{\rotatebox{0}{\box\@outputbox}}}}}%
-                }%
-            \fi%
-        \else%
-            \gdef\LS@rot{\setbox\@outputbox\vbox{%
-                \pdf@landscape@rotate{+90}%
-                \hbox{\rotatebox{90}{\hbox{\rotatebox{0}{\box\@outputbox}}}}}%
-            }%
-        \fi%
-    \fi%
-    \latex@outputpage%
-}
-\makeatother
-%end
-
 %graphics
 \usepackage{graphicx}
-\usepackage[dvipsnames, table]{xcolor}
-%If you upload images from PC, you need to insert code for the path here (different for Windows and Unix OS)
+% Use cases counter
+\newcounter{usecase}[section]
+\newcommand{\usecaseindex}[1] {
+    UC.\the\numexpr\value{usecase}+1\relax
+	\refstepcounter{usecase}\label{#1}
+}
+
 
 
 %Other
@@ -113,5 +72,13 @@
 \usepackage{xspace}
 \usepackage{enumitem}
 \usepackage{amssymb}
-\usepackage[pdftex, colorlinks]{hyperref}
-\newcommand{\comment}[1]{{\color{Red}$\blacktriangleright$ Comment: #1 $\blacktriangleleft$}}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={RASD},
+    }
+
+\urlstyle{same}
