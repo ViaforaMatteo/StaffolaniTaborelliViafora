@@ -524,6 +524,8 @@ Use cases capture functional requirements of a system from the users’ perspect
             \item The farmer types the crop planted
             \item The farmer inserts the amount produced
             \item The farmer inserts the amount of land dedicated to the production
+            \item The farmer types the type of fertilizer used
+            \item The farmer types the amount of fertilizer used 
             \item The farmer clicks on “Finish”
             \item Using the sensors in the distribution system, DREAM retrieves the amount of water used by farmer
             \item Using the sensors in the land, DREAM retrieves the humidity of the soil
@@ -569,8 +571,9 @@ Use cases capture functional requirements of a system from the users’ perspect
         \begin{enumerate}[label=\roman*.,leftmargin=.5cm,noitemsep,topsep=0pt,before=\vspace{-3mm},after=\vspace{-4mm}]
             \item The user opens “Report Production”
             \item The user types the username of the farmer he/she wants to visualize
-            \item System shows search in the database all the data inserted by the farmer
-            \item System shows search in the database all the data inserted by the farmer
+            \item The user clicks "Search"
+            \item System searches in the database all the data inserted by the farmer selected
+            \item System shows the data found
         \end{enumerate} \\
         \hline
         \textbf{Exit conditions} & The user closes DREAM or opens another section of the system.\\
@@ -751,6 +754,7 @@ Use cases capture functional requirements of a system from the users’ perspect
             \item System shows the details of the event selected
             \item The agronomist clicks “Upload Report”
             \item The agronomist types the report of the visit
+            \item The agronomist clicks "Save"
             \item The agronomist clicks “Visit concluded”
         \end{enumerate} \\
         \hline
@@ -843,7 +847,6 @@ Use cases capture functional requirements of a system from the users’ perspect
             \item System shows the list of all the events planned for that day
             \item The agronomist clicks “New Event”
             \item The agronomist inserts a title for the event
-            \item The agronomist selects the time for the visit
             \item The agronomist inserts the username of the farmer he/she has to visit
             \item The agronomist clicks “Create event”
             \item System retrieves the location of the farmer
