@@ -34,7 +34,7 @@ The ambition of this project is that the adoption of DREAM will help the sustain
 workers in Telangana. This is crucial during a pandemic emergency, like the one that is going on, because
 the farmers are the ones more afflicted.
 
-## Mockup
+## Mockups
 ### Farmer
 ![alt text](https://github.com/ViaforaMatteo/StaffolaniTaborelliViafora/blob/main/DeliveryFolder/Mockup/Farmer.gif)
 ### Agronomist
