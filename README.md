@@ -36,11 +36,11 @@ the farmers are the ones more afflicted.
 
 ## Mockup
 ### Farmer
-![alt text](https://github.com/ViaforaMatteo/StaffolaniTaborelliViafora/blob/main/DeliveryFolder/Mockup/farmer.gif)
+![alt text](https://github.com/ViaforaMatteo/StaffolaniTaborelliViafora/blob/main/DeliveryFolder/Mockup/Farmer.gif)
 ### Agronomist
-![alt text](https://github.com/ViaforaMatteo/StaffolaniTaborelliViafora/blob/main/DeliveryFolder/Mockup/agronomist.gif)
+![alt text](https://github.com/ViaforaMatteo/StaffolaniTaborelliViafora/blob/main/DeliveryFolder/Mockup/Agronomist.gif)
 ### TPM
-![alt text](https://github.com/ViaforaMatteo/StaffolaniTaborelliViafora/blob/main/DeliveryFolder/Mockup/tpm.gif)
+![alt text](https://github.com/ViaforaMatteo/StaffolaniTaborelliViafora/blob/main/DeliveryFolder/Mockup/TPM.gif)
 
 ## Authors
 * [__Stefano Staffolani__](https://github.com/staffolanis)
