@@ -2,7 +2,7 @@
 DREAM - Data-dRiven prEdictive fArMing is a Requirement Engineering and Design Project realized for the Software Engineering 2 course at Politecnico di Milano.
 Requirement analysis and design choices are widely described inside the released documents:
 - __Requirements Analysis and Specifications Document__ ([RASD v1.2.pdf](DeliveryFolder/RASD1.2.pdf));
-- __Design Document__ (DD1.0.pdf);
+- __Design Document__ ([DD v1.0.pdf](DeliveryFolder/DD1.0.pdf));
 
 Artifacts of the project can be found in the [DeliveryFolder](DeliveryFolder).
 

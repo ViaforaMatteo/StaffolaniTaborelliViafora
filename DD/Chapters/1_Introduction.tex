@@ -1,0 +1,84 @@
+\section{Introduction}
+\subsection{Purpose}
+Agriculture plays a pivotal role in India’s economy as over 58\% of rural households depend on it as the principal means of livelihood, 80\% of whom are smallholder farmers with less than 5 acres of farmland. More than a fifth of the smallholder farm households are below poverty. The COVID-19 pandemic has greatly highlighted the massive disruption caused in food supply chains exposing the vulnerabilities of marginalized communities, small holder farmers and the importance of building resilient food systems. It has become even more important now that we develop and adopt innovative methodologies and technologies that can help bolster countries against food supply shocks and challenges.\\
+The purpose of Data-dRiven prEdictive fArMing (DREAM) is to help Telangana’s government in designing, developing, and demonstrating anticipatory models for food systems using digital public goods and the community of agricultural worker. To achieve this DREAM allows the communication between the users, gives the possibility to retrieve data from the sensors in Telangana, to track the evolutions of the work of farmers, and to access the data from farmers or from any other sources.\\
+This document contains an explanation of the design decisions made for the entire system, from the general architecture to the specific components and interfaces.
+
+\subsection{Scope}
+Data-dRiven prEdictive fArMing (DREAM) is an easy-to-use and intuitive application which aims to settle for various problems faced by the member of the agricultural community of Telangana.\\
+It allows Telangana's Policy Makers (TPM) to access data and analyze the performance of all farmers in the country, identify which farmers are coping well with adversity and which ones need help, understanding which initiatives are performing best, in order to replicate them in the whole Nation, and they can contact the resilient farmers to give them special incentives.\\
+To improve their cultivations, farmers can get personalized suggestions, report any problem they encountered during their work, request more support by an agronomist or another farmer, discuss in the about any topic in the forum, but they can also provide their data of production.\\
+Agronomists can use this system to increase the effectiveness of their work as they can manage their daily work and keep track of the visits they have planned throughout the year and evaluating the performance of farmers they are responsible of. Furthermore, they have access to the weather forecast and the data collected by the system to better take decisions with farmers or receive requests for help from farmers.
+\newpage
+\subsection{Glossary}
+This section explains the terms used throughout the document.
+\subsubsection{Definitions}
+\begin{center}
+    \begin{tabular}{@{}p{0.35\linewidth} p{0.65\linewidth}}
+        \hline
+        \textbf{Term} & \textbf{Definition}\\
+        \hline
+        \textbf{Resilient Farmers} & Farmers who performed well, despite they faced an adverse weather event\\
+        \textbf{Bad Farmers} & Farmers that are not able to sustain their production\\
+        \textbf{Problem faced by farmers} & Any difficulty that a farmer faced during his/her work, i.e., a bug infestation of the cultures\\
+        \textbf{Type of Production} & How the cultivation is grown, i.e., Shifting Cultivation, intensive, and many more\\
+        \textbf{Data of Production} & Information concerning a single cultivation of a farmer. It includes tons produced per acre of land used, fertilizer used, humidity of the soil, type of production, water usage, seed planted and the zone of the cultivation\\
+        \textbf{Credentials} & Username and Password given by Telangana to a user to access DREAM\\
+        \textbf{Zone} & It refers to a District and a Mandala\\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection{Acronyms}
+\begin{center}
+    \begin{tabular}{p{0.35\linewidth} p{0.65\linewidth}}
+    \hline
+        \textbf{Acronym} & \textbf{Term}\\
+        \hline
+        \textbf{DREAM} & Data-dRiven PrEdictive FArMing in Telangana\\
+        \textbf{TPM} & Telangana Policy Makers\\
+        \textbf{API} & Application Programming Interface\\
+        \textbf{GUI} & Graphical User Interface\\
+    \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection{Abbreviations}
+\begin{center}
+    \begin{tabular}{p{0.35\linewidth} p{0.65\linewidth}}
+    \hline
+        \textbf{Abbreviation} & \textbf{Term}\\
+    \hline
+        \textbf{e.g.} & Exempli Gratia\\
+        \textbf{i.e.} & Id est\\
+        \textbf{R} & Requirement\\
+    \hline
+    \end{tabular}
+\end{center}
+\newpage
+
+\subsection{Reference Documents}
+Below is presented the list of all the documents used to create this document.
+\begin{itemize}
+    \item Project assignment specification document
+    \item DREAM, Requirements Analysis and Specification Document.
+    \item ISO/IEC/IEEE 29148 - Systems and software engineering
+    \item Course slides on WeBeeP
+    \item UNDP India’s \href{https://github.com/UNDP-India/Data4Policy}{Github}
+    \item Telangana’s Forecast \href{https://www.tsdps.telangana.gov.in/aws.jsp}{WebPage}
+    \item Slide of the course: "Sistemi Informativi"
+    \item Slide of the course: "Distributed System"
+    \item \href{ https://severalnines.com/database-blog/how-does-database-load-balancer-work}{WebPage} to support the choice of load balancers.
+    \item Slide of the course: "Ingegneria del Software"
+\end{itemize}
+
+\subsection{Document Structure}
+This document is presented as it follows:
+\begin{enumerate}
+    \item \textbf{Introduction} contains an overall description of the main functionalities of the system and the main focus of this document.
+    \item \textbf{Architecture Design} contains a description of the architecture used to implement the system. It goes from a general, high-level description to the composition of the database and how the individual components work.
+    \item \textbf{User Design Interface} contains a representation of the system's WebApp GUI.
+    \item \textbf{Requirement Traceability} contains a cross-reference that traces components to the requirements contained in RASD document.
+    \item \textbf{Implementation, Integration and Test Plan} presents a description of how the individual components and the functioning of the whole system will be implemented, integrated and tested.
+    \item \textbf{Effort Spent} keeps track of the time spent to complete this document. The first table defines the hours spent as a team for taking the most important decisions or reviewing contents, the seconds contain the individual hours spent working on this project
+\end{enumerate}

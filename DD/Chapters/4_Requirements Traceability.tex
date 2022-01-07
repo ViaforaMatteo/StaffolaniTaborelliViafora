@@ -1,0 +1,104 @@
+\section{Requirement Traceability}
+In this section is presented the mapping between the Requirement described in our Requirements Analysis and Specifications Document.
+\subsection{Mapping Interfaces on Requirements}
+Every requirement is connected to Model (except R47), which is not reported for easier readability
+\begin{enumerate} [label=\textbf{R.\arabic*}]
+    \item Data in the system are never deleted\\
+        \textbf{EntityManager}
+    \item System shall retrieve the data from a sensor of humidity in a land\\
+        \textbf{HumiditySensorController, EntityManager}
+    \item System shall update data of humidity in land every hour\\
+        \textbf{HumiditySensorController, EntityManager}
+    \item System shall retrieve the amount of water supplied to a farmer\\
+        \textbf{WaterSensorController, EntityManager}
+    \item System shall weekly update the amount of water consumed by a farmers\\
+        \textbf{WaterSensorController, EntityManager}
+    \item System shall compute a ranking of the farmers’ performances\\
+        \textbf{RankingManager, EntityManager}
+    \item System shall allow any user to communicate with any other user using the chat function\\
+        \textbf{ChatManager, EntityManager}
+    \item System shall allow a farmer to insert his/her type of production\\
+        \textbf{WebApp, FarmerManager, ProductionManager, WikiFarmManager}
+    \item System shall store the location of each farmer\\
+        \textbf{EntityManager}
+    \item System shall store all the types of production of each farmer\\
+        \textbf{EntityManager}
+    \item System shall allow a farmer to filter the type of data he/she wants to visualize\\
+        \textbf{WebApp, FarmerManager}
+    \item System shall receive information about local weather forecast\\
+        \textbf{WeatherManager}
+    \item System shall allow a farmer to visualize the weather forecast\\
+        \textbf{WebApp, FarmerManager, WeatherManager}
+    \item System shall store all the fertilizers available in Telangana\\
+        \textbf{EntityManager}
+    \item System shall suggest fertilizers based on the retrieved data\\
+        \textbf{WikiFarmManager, EntityManager}
+    \item System shall store all crops that can be planted in Telangana\\
+        \textbf{EntityManager}
+    \item System shall suggest crops based on the retrieved data\\
+        \textbf{WikiFarmManager, EntityManager}
+    \item System shall allow a farmer to insert his/her data of production\\
+        \textbf{WebApp, FarmerManager, ProductionManager}
+    \item System shall store all data of production of farmers\\
+        \textbf{EntityManager}
+    \item System shall allow a farmer to insert data about a problem that he/she faced\\
+        \textbf{WebApp, FarmerManager, ProblemManager}
+    \item System shall store all data of problems faced by farmers\\
+        \textbf{EntityManager}
+    \item System shall allow a resilient farmer to share best practices with other farmers\\
+        \textbf{WebApp, FarmerManager, ForumManager, EntityManager}
+    \item System shall allow a farmer to ask for help\\
+        \textbf{WebApp, FarmerManager, HelpManager, EntityManager}
+    \item System shall allow a farmer to reply to a request of help\\
+        \textbf{WebApp, FarmerManager, HelpManager, EntityManager}
+    \item System shall allow a farmer to create a new discussion in the Forum\\
+        \textbf{WebApp, FarmerManager, ForumManager, EntityManager}
+    \item System shall allow a farmer to reply to a discussion in the Forum\\
+        \textbf{WebApp, FarmerManager, ForumManager, EntityManager}
+    \item System shall allow an agronomist to select the area he/she is responsible of\\
+        \textbf{WebApp, AgronomistManager, EntityManager}
+    \item System shall allow an agronomist to visualize a request of help in the area he/she is responsible of\\
+        \textbf{WebApp, AgronomistManager, HelpManager, EntityManager}
+    \item System shall allow an agronomist to reply to a request of help in the area he/she is responsible of\\
+        \textbf{WebApp, AgronomistManager, HelpManager, EntityManager}
+    \item System shall allow an agronomist to visualize the weather forecast for the area he/she is responsible of\\
+        \textbf{WebApp, AgronomistManager, WeatherManager}
+    \item System shall allow an agronomist to visualize the performances of farmers in the area he/she is responsible of\\
+        \textbf{WebApp, AgronomistManager, RankingManager, EntityManager}
+    \item System shall allow an agronomist to visualize data of production inserted by farmers\\
+        \textbf{WebApp, AgronomistManager, ProductionManager, EntityManager}
+    \item System shall allow an agronomist to visualize problems reported by farmers in the area he/she is responsible of\\
+        \textbf{WebApp, AgronomistManager, ProblemManager, EntityManager}
+    \item System shall store the daily plan of all agronomists\\
+        \textbf{EntityManager}
+    \item System shall allow an agronomist to visualize his/her daily plan\\
+        \textbf{WebApp, AgronomistManager, AgendaManager, EntityManager}
+    \item System shall allow an agronomist to update his/her daily plan\\
+        \textbf{WebApp, AgronomistManager, AgendaManager, EntityManager}
+    \item System shall allow an agronomist to confirm his/her daily plan\\
+        \textbf{WebApp, AgronomistManager, AgendaManager, EntityManager}
+    \item System shall allow an agronomist to insert the deviations from his/her original daily plan\\
+        \textbf{WebApp, AgronomistManager, AgendaManager, EntityManager}
+    \item System shall store all the initiatives took by a farmer and an agronomist\\
+        \textbf{EntityManager}
+    \item System shall allow an agronomist to insert an initiative he/she proposed to a farmer\\
+        \textbf{WebApp, AgronomistManager, AgendaManager, EntityManager}
+    \item System shall allow TPM to visualize the ranking of farmers’ performances\\
+        \textbf{WebApp, TPMManager, RankingManager, EntityManager}
+    \item System shall allow TPM to visualize data about the production of a farmer\\
+        \textbf{WebApp, TPMManager, ProductionManager, EntityManager}
+    \item System shall allow TPM to visualize the problems reported by farmers\\
+        \textbf{WebApp, TPMManager, ProblemManager, EntityManager}
+    \item System shall allow TPM to visualize initiatives taken by agronomist during his/her visits\\
+        \textbf{WebApp, TPMManager, InitiativesManager, EntityManager}
+    \item System shall allow TPM to ask to a resilient farmer to share best practices\\
+        \textbf{WebApp, TPMManager, ChatManager, EntityManager}
+    \item System shall allow TPM to signal bad farmers to Agronomists\\
+        \textbf{WebApp, TPMManager, ChatManager, EntityManager}
+    \item System shall allow any user to access through a browser\\
+        \textbf{WebApp}
+    \item System shall allow any user to log in using his/her credentials\\
+        \textbf{WebApp, AuthManager, EntityManager}
+    \item System shall give access to any user who has the right permission. For example, a farmer could not access to “Agenda”\\
+        \textbf{WebApp, AuthManager, FarmerManager, AgronomistManager, TPMManager}
+\end{enumerate}
